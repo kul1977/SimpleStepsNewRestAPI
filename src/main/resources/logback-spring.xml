@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<!-- Define folder for keep log file -->
+<!-- 	<property name="LOGS"          value="/API/Logs" />
+	<property name="Filename_Logs" value="SimpleStepsNetRestAPI" />
+ -->	
+ 
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %msg%n%throwable</Pattern>
+		</layout>
+	</appender>
+	
+	<!-- <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/${Filename_Logs}.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %m%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			rollover daily and when the file reaches 10 MegaBytes
+			<fileNamePattern>${LOGS}/All/${Filename_Logs}-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="RollingFileDev" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/${Filename_Logs}-dev-success.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+	         <level>INFO</level>
+	        <level>DEBUG</level>
+	    </filter>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %m%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			rollover daily and when the file reaches 10 MegaBytes
+			<fileNamePattern>${LOGS}/Dev/success/${Filename_Logs}-dev-success-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="RollingFileDevError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/${Filename_Logs}-dev-error.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+	        <level>ERROR</level>
+	        <level>WARN</level>
+	    </filter>
+	   
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %m%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			rollover daily and when the file reaches 10 MegaBytes
+			<fileNamePattern>${LOGS}/Dev/error/${Filename_Logs}-dev-error-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="RollingFileProd" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/${Filename_Logs}-prod-success.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+	         <level>INFO</level>
+	        <level>DEBUG</level>
+	    </filter>
+	    
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %m%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			rollover daily and when the file reaches 10 MegaBytes
+			<fileNamePattern>${LOGS}/Prod/success/${Filename_Logs}-prod-success-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="RollingFileProdError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/${Filename_Logs}-prod-error.log</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+	        <level>ERROR</level>
+	        <level>WARN</level>
+	    </filter>
+	   
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{dd MM yyyy | HH:mm:ss} %-5level [%t] %C{1.} : %m%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			rollover daily and when the file reaches 10 MegaBytes
+			<fileNamePattern>${LOGS}/Prod/error/${Filename_Logs}-prod-error-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender> -->
+
+<!-- 	<logger name="com.msa.config" level="debug" additivity="false">
+		<appender-ref ref="Console" />
+	</logger>
+
+	<logger name="com.msa.service" level="debug" additivity="false">
+		<appender-ref ref="Console" />
+	</logger>
+ -->
+	
+	<!-- LOG everything at INFO level -->
+	<root level="info">
+		<!-- <appender-ref ref="RollingFile" /> -->
+		<appender-ref ref="Console" />		
+	</root>
+	
+<!-- 	<springProfile name="local">
+	    <logger name="com.msa.controller" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" />
+			<appender-ref ref="Console" />
+		</logger>
+	   <logger name="com.oldmen.demo" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" />
+			<appender-ref ref="Console" />
+		</logger>
+  	</springProfile> -->
+  	
+<!-- 	 <springProfile name="dev">
+		    <logger name="com.msa.controller" level="debug" additivity="false">
+				<appender-ref ref="RollingFileDev" />
+				<appender-ref ref="RollingFileDevError" />
+			</logger>
+		    <logger name="com.msa.service" level="debug" additivity="false">
+				<appender-ref ref="RollingFileDev" />
+				<appender-ref ref="RollingFileDevError" />
+			</logger>
+			<logger name="com.msa.config" level="debug" additivity="false">
+				<appender-ref ref="RollingFileDev" />
+				<appender-ref ref="RollingFileDevError" />
+			</logger>
+	  </springProfile>
+	  <springProfile name="prod">
+		    <logger name="com.msa.controller" level="debug" additivity="false">
+				<appender-ref ref="RollingFileProd" />
+				<appender-ref ref="RollingFileProdError" />
+			</logger>
+		  	<logger name="com.msa.service" level="debug" additivity="false">
+				<appender-ref ref="RollingFileProd" />
+				<appender-ref ref="RollingFileProdError" />
+			</logger>
+			<logger name="com.msa.config" level="debug" additivity="false">
+				<appender-ref ref="RollingFileProd" />
+				<appender-ref ref="RollingFileProdError" />
+			</logger>
+	  </springProfile> -->
+	
+</configuration>
